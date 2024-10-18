@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Set a max width for the container */
+    max-width: 800px; /* Maximum width for the chart */
+}
+
+canvas {
+    width: 100% !important; /* Ensure the canvas takes full width of the container */
+    height: 400px !important; /* Set an explicit height for the canvas */
+}
