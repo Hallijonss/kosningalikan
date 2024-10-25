@@ -1,30 +1,205 @@
-* {
+/* General Page Styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.6;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Container Styling */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+
+/* Poll Weights Section */
+.poll-weight {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Grid for Poll Weights */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensure grid adapts responsively */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Elegant Table Styling */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    color: #333;
+    margin: 25px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+/* Ensure table is scrollable on small screens */
+.table-container {
+    max-width: 100%; 
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+table {
+    width: 100%;
+    table-layout: auto; /* Allow table to resize based on content */
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.75rem; /* Smaller font size for mobile */
+    }
+
+    th, td {
+        padding: 6px; /* Reduce padding to fit smaller screens */
+    }
+}
+
+/* Flexbox for chart section */
+.flex {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    gap: 20px;
+    flex-wrap: nowrap; /* By default, charts are side by side */
+    margin-bottom: 20px;
+}
+
+/* Bar chart gets more space, pie chart gets less on PC */
+.bar-chart-container {
+    flex-basis: 70%; /* Bar chart takes 70% of the space */
+    max-width: 70%;
+    height: 400px; /* Fix height for the bar chart */
+}
+
+.pie-chart-container {
+    flex-basis: 30%; /* Pie chart takes 30% of the space */
+    max-width: 30%;
+    height: 400px; /* Ensure height is controlled */
+}
+
+/* For mobile screens, stack the charts vertically */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column; /* Stack charts on top of each other */
+        align-items: center;
+    }
+
+    .bar-chart-container, .pie-chart-container {
+        width: 100%; /* Ensure charts take full width on mobile */
+        max-width: 100%; /* Prevent overflow */
+    }
+
+    .pie-chart-container {
+        height: 300px; /* Control height for mobile */
+    }
+
+    .bar-chart-container {
+        height: 300px; /* Control height for mobile */
+    }
+}
+
+/* Control chart canvas size */
+#pollChart, #seatChart {
+    width: 100% !important;
+    height: auto !important; /* Allow height to adjust automatically */
+    max-height: 400px !important; /* Limit the max height */
+}
+
+/* Text Section Styling */
+.text-section {
+    max-width: 800px; /* Limit the width of the text section */
+    margin: 20px auto; /* Center the text section and add spacing */
+    padding: 20px; /* Add padding around the text */
+    background-color: #f9f9f9; /* Light background for the section */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.text-section h2 {
+    font-size: 1.5rem; /* Slightly larger font size for the heading */
+    color: #333; /* Darker color for the heading */
+    margin-bottom: 15px;
+}
+
+.text-section p {
+    font-size: 1rem; /* Default paragraph font size */
+    line-height: 1.6; /* Add line spacing for better readability */
+    color: #555; /* Lighter gray for the text */
+}
+
+
+/* Elegant Dropdown Styling */
+.poll-weight {
+    appearance: none; /* Remove default dropdown arrow */
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
     color: #333;
+    transition: border-color 0.3s ease;
 }
 
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Set a max width for the container */
-    max-width: 800px; /* Maximum width for the chart */
+.poll-weight:hover {
+    border-color: #009879; /* Add a subtle hover effect */
 }
 
-canvas {
-    width: 100% !important; /* Ensure the canvas takes full width of the container */
-    height: 400px !important; /* Set an explicit height for the canvas */
+.poll-weight:focus {
+    outline: none;
+    border-color: #009879; /* Focus effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft focus glow */
 }

@@ -3,16 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kosningavefur</title>
+    <title>Election Forecast</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>Niðurstöður kosningalíkans - 18 Október</h1>
-        <canvas id="pollChart" width="400" height="200"></canvas>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="container mx-auto p-6 bg-white shadow-lg rounded-lg text-center">
+        <h1 class="text-3xl font-bold mb-6">Kosningaspá</h1>
+<!-- Text Section -->
+<div class="text-section">
+    <h2 class="text-lg font-bold mb-4">Hvernig skal nota kosningaspá</h2>
+    <p class="text-base mb-4">
+    Þessi síða inniheldur kannarnir frá helstu aðilum fyrir þingkosningar 2024. Þú getur valið vægi hverja könnunar og séð vegið meðaltal þeirra á súluriti hér að neðan. Einnig getur þú haft niðurstöður haft áhrif á meðaltalið.
+    </p>
+    <p class="text-base">
+    Hafa skal í huga að það sé ekki endilega búið að uppfæra með nýustu kannarnir. Þingsæti eru reiknuð einungis út frá hlutfalli atkvæða en raunreikningur er mun flóknari.    <a href="https://www.visindavefur.is/svar.php?id=27674" target="_blank">
+        Ýtið hér fyrir upplýsingar um kosningakerfið
+    </a>
+    </p>
+</div>
+
+        <!-- Poll Data Table -->
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Flokkar</th>
+                        <th>Samfylk.</th>
+                        <th>Miðflok.</th>
+                        <th>Sjálfst..</th>
+                        <th>Viðreisn</th>
+                        <th>Fólksins</th>
+                        <th>Píratar</th>
+                        <th>Frams.</th>
+                        <th>Sósíal.</th>
+                        <th>Vinstri G.</th>
+                        <th>Lýðræðis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prósent</td>
+                        <td>24.8</td>
+                        <td>15.1</td>
+                        <td>15.6</td>
+                        <td>14.1</td>
+                        <td>10.8</td>
+                        <td>6.1</td>
+                        <td>6.2</td>
+                        <td>4.2</td>
+                        <td>2.3</td>
+                        <td>0.9</td>
+                    </tr>
+                    <tr>
+                        <td>Maskína</td>
+                        <td>22.8</td>
+                        <td>17</td>
+                        <td>13.7</td>
+                        <td>13.8</td>
+                        <td>6.6</td>
+                        <td>6.8</td>
+                        <td>7</td>
+                        <td>5.3</td>
+                        <td>4.5</td>
+                        <td>2.4</td>
+                    </tr>
+                    <tr>
+                        <td>Gallúp</td>
+                        <td>26.4</td>
+                        <td>16</td>
+                        <td>17.1</td>
+                        <td>10.1</td>
+                        <td>6.7</td>
+                        <td>7.8</td>
+                        <td>7</td>
+                        <td>5.7</td>
+                        <td>3.4</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>9.9</td>
+                        <td>5.4</td>
+                        <td>24.4</td>
+                        <td>8.3</td>
+                        <td>8.8</td>
+                        <td>8.6</td>
+                        <td>17.3</td>
+                        <td>4.1</td>
+                        <td>11.5</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Poll Weights Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div>
+                <label for="poll1" class="block text-sm font-medium text-gray-700">Prósent:</label>
+                <select id="poll1" class="poll-weight">
+                    <option value="0">Ekki með</option>
+                    <option value="1">Lítið vægi</option>
+                    <option value="3">Meðal Vægi</option>
+                    <option value="5">Mikið vægi</option>
+                </select>
+            </div>
+            <div>
+                <label for="poll2" class="block text-sm font-medium text-gray-700">Maskína:</label>
+                <select id="poll2" class="poll-weight">
+                    <option value="0">Ekki með</option>
+                    <option value="1">Lítið vægi</option>
+                    <option value="3">Meðal Vægi</option>
+                    <option value="5">Mikið vægi</option>
+                </select>
+            </div>
+            <div>
+                <label for="poll3" class="block text-sm font-medium text-gray-700">Gallúp:</label>
+                <select id="poll3" class="poll-weight">
+                    <option value="0">Ekki með</option>
+                    <option value="1">Lítið vægi</option>
+                    <option value="3">Meðal Vægi</option>
+                    <option value="5">Mikið vægi</option>
+                </select>
+            </div>
+            <div>
+                <label for="poll4" class="block text-sm font-medium text-gray-700">2021:</label>
+                <select id="poll4" class="poll-weight">
+                    <option value="0">Ekki með</option>
+                    <option value="1">Lítið vægi</option>
+                    <option value="3">Meðal Vægi</option>
+                    <option value="5">Mikið vægi</option>
+                </select>
+            </div>
+        </div>
+
+<!-- Charts Section -->
+<div class="flex">
+    <div class="chart-container bar-chart-container">
+        <h2 class="text-lg font-bold mb-2">Fylgi flokka</h2>
+        <canvas id="pollChart"></canvas>
     </div>
-    <!-- Use Chart.js version 4.0.1 (current latest) -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
-    <script src="script.js"></script>
+    <div class="chart-container pie-chart-container">
+        <h2 class="text-lg font-bold mb-2">Sæti flokka</h2>
+        <canvas id="seatChart"></canvas>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+        <!-- Party Selection for Seat Calculation -->
+        <div class="party-selection">
+            <h2 class="text-xl font-bold mb-4">Veldu flokka í ríkkisstjórn (32 sæti)</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4">
+                <!-- Dynamically generated checkboxes for parties -->
+                <div><label><input type="checkbox" class="party-checkbox" value="Samfylkingin"> Samfylkingin</label></div>
+                <div><label><input type="checkbox" class="party-checkbox" value="Miðflokkurinn"> Miðflokkurinn</label></div>
+                <div><label><input type="checkbox" class="party-checkbox" value="Sjálfstæðisflokkurinn"> Sjálfstæðisflokkurinn</label></div>
+                <div><label><input type="checkbox" class="party-checkbox" value="Viðreisn"> Viðreisn</label></div>
+                <div><label><input type="checkbox" class="party-checkbox" value="Flokkur Fólksins"> Flokkur Fólksins</label></div>
+                <div><label><input type="checkbox" class="party-checkbox" value="Píratar"> Píratar</label></div>
+                <div><label><input type="checkbox" class="party-checkbox" value="Framsókn"> Framsókn</label></div>
+                <div><label><input type="checkbox" class="party-checkbox" value="Sósíalistaflokkurinn"> Sósíalistaflokkurinn</label></div>
+                <div><label><input type="checkbox" class="party-checkbox" value="Vinstri Grænir"> Vinstri Grænir</label></div>
+                <div><label><input type="checkbox" class="party-checkbox" value="Lýðræðisflokkurinn"> Lýðræðisflokkurinn</label></div>
+            </div>
+            <h3 class="text-lg font-bold">Fjöldi sæta : <span id="total-seats">0</span></h3>
+        </div>
+
+    </div>
 </body>
 </html>
