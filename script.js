@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const pollData = [
         { 'Samfylkingin': 24.8, 'Miðflokkurinn': 15.1, 'Sjálfstæðisflokkurinn': 15.6, 'Viðreisn': 14.1, 'Flokkur Fólksins': 10.8, 'Píratar': 6.1, 'Framsókn': 6.2, 'Sósíalistaflokkurinn': 4.2, 'Vinstri Grænir': 2.3, 'Lýðræðisflokkurinn': 0.9 },
         { 'Samfylkingin': 22.8, 'Miðflokkurinn': 17, 'Sjálfstæðisflokkurinn': 13.7, 'Viðreisn': 13.8, 'Flokkur Fólksins': 6.6, 'Píratar': 6.8, 'Framsókn': 7, 'Sósíalistaflokkurinn': 5.3, 'Vinstri Grænir': 4.5, 'Lýðræðisflokkurinn': 2.4 },
-        { 'Samfylkingin': 26.4, 'Miðflokkurinn': 16, 'Sjálfstæðisflokkurinn': 17.1, 'Viðreisn': 10.1, 'Flokkur Fólksins': 6.7, 'Píratar': 7.8, 'Framsókn': 7, 'Sósíalistaflokkurinn': 5.7, 'Vinstri Grænir': 3.4, 'Lýðræðisflokkurinn': 0 },
+        { 'Samfylkingin': 22.2, 'Miðflokkurinn': 15.9, 'Sjálfstæðisflokkurinn': 13.9, 'Viðreisn': 16.2, 'Flokkur Fólksins': 9.3, 'Píratar': 4.5, 'Framsókn': 6.9, 'Sósíalistaflokkurinn': 4, 'Vinstri Grænir': 3.8, 'Lýðræðisflokkurinn': 1.6 },
         { 'Samfylkingin': 9.9, 'Miðflokkurinn': 5.4, 'Sjálfstæðisflokkurinn': 24.4, 'Viðreisn': 8.3, 'Flokkur Fólksins': 8.8, 'Píratar': 8.6, 'Framsókn': 17.3, 'Sósíalistaflokkurinn': 4.1, 'Vinstri Grænir': 11.5, 'Lýðræðisflokkurinn': 0 }
     ];
 
