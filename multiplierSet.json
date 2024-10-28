@@ -1,0 +1,272 @@
+[
+    {
+        "Flokkur": "Samfylkingin",
+        "Reykjavík Norður": {
+            "set_1": 1.306306306,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 1.175675676,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 0.896396396,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 0.707207207,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 0.72972973,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 0.810810811,
+            "set_2": 1.0
+        }
+    },
+    {
+        "Flokkur": "Viðreisn",
+        "Reykjavík Norður": {
+            "set_1": 1.185185185,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 1.24691358,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 1.111111111,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 0.604938272,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 0.648148148,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 0.771604938,
+            "set_2": 1.0
+        }
+    },
+    {
+        "Flokkur": "Miðflokkurinn",
+        "Reykjavík Norður": {
+            "set_1": 0.672955975,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 0.849056604,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 1.050314465,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 1.308176101,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 1.339622642,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 1.238993711,
+            "set_2": 1.0
+        }
+    },
+    {
+        "Flokkur": "Sjálfstæðisflokkurinn",
+        "Reykjavík Norður": {
+            "set_1": 0.683453237,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 0.935251799,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 1.338129496,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 0.690647482,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 0.90647482,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 1.244604317,
+            "set_2": 1.0
+        }
+    },
+    {
+        "Flokkur": "Flokkur Fólksins",
+        "Reykjavík Norður": {
+            "set_1": 0.688172043,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 0.88172043,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 0.677419355,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 1.698924731,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 1.215053763,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 1.580645161,
+            "set_2": 1.0
+        }
+    },
+    {
+        "Flokkur": "Framsókn",
+        "Reykjavík Norður": {
+            "set_1": 0.869565217,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 0.579710145,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 0.652173913,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 2.173913043,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 1.68115942,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 1.014492754,
+            "set_2": 1.0
+        }
+    },
+    {
+        "Flokkur": "Píratar",
+        "Reykjavík Norður": {
+            "set_1": 1.0,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 1.066666667,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 1.511111111,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 0.644444444,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 1.0,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 0.422222222,
+            "set_2": 1.0
+        }
+    },
+    {
+        "Flokkur": "Sósíalistaflokkurinn",
+        "Reykjavík Norður": {
+            "set_1": 1.5,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 1.025,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 0.95,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 0.85,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 0.75,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 0.55,
+            "set_2": 1.0
+        }
+    },
+    {
+        "Flokkur": "Vinstri Grænir",
+        "Reykjavík Norður": {
+            "set_1": 1.605263158,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 0.921052632,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 0.5,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 0.578947368,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 1.5,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 0.842105263,
+            "set_2": 1.0
+        }
+    },
+    {
+        "Flokkur": "Lýðræðisflokkurinn",
+        "Reykjavík Norður": {
+            "set_1": 0.8125,
+            "set_2": 1.0
+        },
+        "Reykjavík Suður": {
+            "set_1": 0.5625,
+            "set_2": 1.0
+        },
+        "Suðvestur": {
+            "set_1": 0.875,
+            "set_2": 1.0
+        },
+        "Norðvestur": {
+            "set_1": 1.5625,
+            "set_2": 1.0
+        },
+        "Norðaustur": {
+            "set_1": 0.875,
+            "set_2": 1.0
+        },
+        "Suður": {
+            "set_1": 1.4375,
+            "set_2": 1.0
+        }
+    }
+]

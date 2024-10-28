@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Election Forecast</title>
+    <title>Anton Andri Guðmundsson</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
@@ -23,7 +23,10 @@
         Ýtið hér fyrir upplýsingar um kosningakerfið
     </a>
     </p>
-    <p class="text-base">Könnun Prósent 25. Október, Könnun Maskínu 28 október, Könnun Gallúp 30. Ágúst</p>
+    <br>
+    <p class="text-base">
+        Könnun Prósent 25. október.<br>Könnun Maskínu 28 október.<br>Könnun Gallúp 30. ágúst.
+    </p>
 </div>
 
         <!-- Poll Data Table -->
@@ -100,7 +103,13 @@
                 </tbody>
             </table>
         </div>
-
+        <div>
+            <label for="multiplierSet">Veldu dreifingu atkvæða eftir kjördæmum:</label>
+                <select id="multiplierSet">
+                <option value="set_1">Könnun Maskínu</option>
+                <option value="set_2">Jöfn dreifing</option>
+            </select>
+        </div>
         <!-- Poll Weights Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <div>
