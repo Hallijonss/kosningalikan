@@ -184,6 +184,17 @@
             </div>
             <h3 class="text-lg font-bold">Fjöldi sæta : <span id="total-seats">0</span></h3>
         </div>
+        <br>
+        <br>
+        <p id="name">Dagur B. Eggertsson</p>
+        <button onclick="strikeOutName()">Ýttu hér til að strika út Dag</button>
+    
+        <script>
+            function strikeOutName() {
+                var nameElement = document.getElementById("name");
+                nameElement.style.textDecoration = "line-through";
+            }
+        </script>
 
     </div>
 </body>
